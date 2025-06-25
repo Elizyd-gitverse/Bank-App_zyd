@@ -263,6 +263,7 @@ btnTransfer.addEventListener('click', function(e) {
     currentAccount.movementsDates.push(new Date().toISOString())
     recieverAcc.movementsDates.push(new Date().toISOString())
     displayMovements(currentAccount)
+    inputTransferTo.value = inputTransferAmount.value = ''
     if(timer) clearInterval(timer)
       timer = setTimer()
   }
@@ -277,6 +278,7 @@ btnLoan.addEventListener('click', function(e) {
       currentAccount.movements.push(amount)
       currentAccount.movementsDates.push(new Date().toISOString())
       displayMovements(currentAccount)
+      inputLoanAmount.value = ''
       if(timer) clearInterval(timer)
         timer = setTimer()
     }
