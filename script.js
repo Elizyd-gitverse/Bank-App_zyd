@@ -119,7 +119,7 @@ const FormatMoveDate = function(dates, locale) {
  const passedDays = passedDate(dates, new Date())
   if(passedDays === 0) return 'Today'
   if(passedDays === 1) return 'yesterday'
-  if(passedDays <= 7) return `${passedDays} ago`
+  if(passedDays <= 7) return `${passedDays} days ago`
   else return new Intl.DateTimeFormat(locale).format(dates)
 }
 
